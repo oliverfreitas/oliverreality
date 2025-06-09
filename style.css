@@ -998,4 +998,12 @@ section {
   #hero .hero-content {
     padding: 1rem;
   }
+  #proposito .flex-image {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
 }
