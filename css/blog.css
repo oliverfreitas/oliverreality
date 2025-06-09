@@ -44,6 +44,7 @@
 .blog-post-content {
     padding: var(--spacing-medium);
 }
+
 #blog {
     padding: var(--spacing-large);
     max-width: 1200px;
@@ -103,18 +104,6 @@
     margin-top: auto;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .blog-posts {
-        grid-template-columns: 1fr;
-    }
-
-    .blog-post-content h3 {
-        font-size: 1.3rem;
-    }
-}
-
-/* Estilos para a seção de links e CTA do blog */
 .blog-links-cta {
     background: var(--color-light);
     border-radius: var(--border-radius);
@@ -202,23 +191,6 @@
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .blog-links-cta {
-        padding: var(--spacing-medium);
-    }
-
-    .blog-links-cta ul {
-        flex-direction: column;
-        gap: var(--spacing-small);
-    }
-
-    .blog-links-cta ul li a {
-        width: 100%;
-    }
-}
-
-/* Estrutura do artigo */
 .blog-post-content {
     max-width: 900px;
     margin: 2rem auto;
@@ -328,4 +300,32 @@
 .benefit-title {
     color: #8e44ad;
     margin: 0 0 0.5rem 0;
+}
+
+/* =========================
+   RESPONSIVIDADE: BLOG (blog.html e posts)
+   Ajusta grid, títulos e links do blog para telas menores.
+*/
+@media (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-post-content h3 {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 768px) {
+    .blog-links-cta {
+        padding: var(--spacing-medium);
+    }
+
+    .blog-links-cta ul {
+        flex-direction: column;
+        gap: var(--spacing-small);
+    }
+
+    .blog-links-cta ul li a {
+        width: 100%;
+    }
 }

@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--spacing-medium);
+    transform: translateY(-5px);
 }
 
 /* Ajustes específicos para a seção CTA do portfólio */
@@ -52,35 +53,4 @@
     background: var(--color-accent);
     color: #fff;
     border-color: var(--color-accent);
-}
-
-@media (max-width: 900px) {
-    .portfolio-cta {
-        padding: var(--spacing-medium) var(--spacing-small);
-        max-width: 98vw;
-    }
-    .portfolio-cta h2 {
-        font-size: 1.5rem;
-    }
-    .portfolio-cta p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .portfolio-cta {
-        padding: var(--spacing-small);
-        margin: var(--spacing-large) var(--spacing-small);
-    }
-    .portfolio-cta h2 {
-        font-size: 1.3rem;
-    }
-    .portfolio-cta p {
-        font-size: 0.95rem;
-    }
-    .portfolio-cta .btn-cta {
-        width: 100%;
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
-    }
 }

@@ -110,22 +110,6 @@
     box-shadow: var(--box-shadow);
 }
 
-@media (max-width: 900px) {
-    .flex-section,
-    .historia2-flex {
-        flex-direction: column;
-        gap: var(--spacing-large);
-    }
-
-    .flex-text,
-    .historia2-texto,
-    .flex-image,
-    .historia2-img {
-        min-width: 100%;
-        max-width: 100%;
-    }
-}
-
 .edicao-fotos-section {
     text-align: center;
     margin: var(--spacing-xlarge) 0;
@@ -244,50 +228,23 @@
     border-color: var(--color-accent);
 }
 
-@media (max-width: 900px) {
-    .portfolio-cta {
-        padding: var(--spacing-medium) var(--spacing-small);
-        max-width: 98vw;
-    }
-    .portfolio-cta h2 {
-        font-size: 1.5rem;
-    }
-    .portfolio-cta p {
-        font-size: 1rem;
-    }
-}
-
+/* =========================
+   RESPONSIVIDADE: HERO (index.html)
+   Ajusta botões e layout da seção principal para mobile.
+*/
 @media (max-width: 600px) {
-    .portfolio-cta {
-        padding: var(--spacing-small);
-        margin: var(--spacing-large) var(--spacing-small);
-    }
-    .portfolio-cta h2 {
-        font-size: 1.3rem;
-    }
-    .portfolio-cta p {
-        font-size: 0.95rem;
-    }
-    .portfolio-cta .btn-cta {
+    #hero .hero-content a.btn {
+        display: block;
         width: 100%;
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
+        margin: 0 0 1rem 0;
+    }
+    #hero .hero-content a.btn:last-child {
+        margin-bottom: 0;
+    }
+    #hero .hero-content {
+        padding: 1rem;
     }
 }
-@media (max-width: 600px) {
-  #hero .hero-content a.btn {
-    display: block;
-    width: 100%;
-    margin: 0 0 1rem 0;
-  }
-  #hero .hero-content a.btn:last-child {
-    margin-bottom: 0;
-  }
-  #hero .hero-content {
-    padding: 1rem;
-  }
-}
-
 
 @media (max-width: 600px) {
     #hero .hero-content .btn {
@@ -302,21 +259,3 @@
     }
 }
 
-
-
-@media (max-width: 600px) {
-    .flex-image, .historia2-img {
-        max-width: 90% !important;
-        margin: 0 auto;
-    }
-    .edicao-fotos-galeria img {
-        min-width: unset;
-        width: 90%;
-    }
-    .edicao-image {
-        max-width: 90% !important;
-    }
-    .depoimento-img {
-        max-width: 80% !important;
-    }
-}

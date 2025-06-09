@@ -1,3 +1,8 @@
+/*
+  =========================
+  VARIÁVEIS GLOBAIS E RESET (todas as páginas)
+  Define cores, fontes, espaçamentos e estilos base para todo o site.
+*/
 :root {
     --color-background: #14171c;
     --color-text: #f5f6fa;
@@ -18,20 +23,28 @@
     --spacing-large: 2rem;
     --spacing-xlarge: 4rem;
     --border-radius: 6px;
-    --box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
     --transition-speed: 0.3s;
 }
 
+/* Reset de margens, paddings e box-sizing para todos os elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+/* Garante altura total da página */
+html,
+body {
     height: 100%;
 }
 
+/*
+  =========================
+  ESTILO BASE DO BODY (todas as páginas)
+  Define fonte, cor de fundo, cor do texto e layout flexível.
+*/
 body {
     font-family: var(--font-primary);
     font-size: var(--font-size-base);
@@ -44,10 +57,16 @@ body {
     flex-direction: column;
 }
 
+/* Garante que o main ocupe o espaço restante */
 main {
     flex: 1 0 auto;
 }
 
+/*
+  =========================
+  LINKS (todas as páginas)
+  Estilo padrão e hover para links.
+*/
 a {
     text-decoration: none;
     color: var(--color-primary);
@@ -75,7 +94,10 @@ img {
     padding: 0 var(--spacing-medium);
 }
 
-/* Header & Navigation */
+/* =========================
+   HEADER E NAVEGAÇÃO (todas as páginas)
+   Estiliza o cabeçalho, navegação principal e logo. Inclui sticky header.
+*/
 header {
     background-color: var(--color-background);
     box-shadow: var(--box-shadow);
@@ -124,7 +146,10 @@ header nav ul li a:hover {
     color: #232a34;
 }
 
-/* Main Content Sections */
+/* =========================
+   SEÇÕES E TÍTULOS (todas as páginas)
+   Estiliza seções principais e títulos com destaque visual.
+*/
 section {
     margin-bottom: var(--spacing-xlarge);
     background: var(--color-light);
@@ -150,7 +175,10 @@ section h2::after {
     margin: var(--spacing-small) auto;
 }
 
-/* Footer */
+/* =========================
+   FOOTER (todas as páginas)
+   Rodapé estilizado com cor de fundo, centralização e espaçamento.
+*/
 footer {
     background: var(--color-secondary);
     color: var(--color-light);
@@ -180,7 +208,6 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Menu Mobile */
 .menu-toggle {
     display: none;
     background: none;
@@ -190,6 +217,18 @@ footer p {
     cursor: pointer;
 }
 
+.section-title {
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f9f6f2;
+}
+
+/* =========================
+   RESPONSIVIDADE: MENU E NAVEGAÇÃO (todas as páginas)
+   Ajusta o menu para mobile, exibindo botão e menu em coluna.
+*/
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -211,10 +250,75 @@ footer p {
     }
 }
 
-.section-title {
-    font-size: 1.8rem;
-    color: var(--color-secondary);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #f9f6f2;
+/* =========================
+   RESPONSIVIDADE: SEÇÕES FLEX (index.html, sobre, história)
+   Ajusta layout flexível para coluna em telas menores.
+*/
+@media (max-width: 900px) {
+    .flex-section,
+    .historia2-flex {
+        flex-direction: column;
+        gap: var(--spacing-large);
+    }
+
+    .flex-text,
+    .historia2-texto,
+    .flex-image,
+    .historia2-img {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .flex-image,
+    .historia2-img {
+        max-width: 90% !important;
+        margin: 0 auto;
+    }
+    .edicao-fotos-galeria img {
+        min-width: unset;
+        width: 90%;
+    }
+    .edicao-image {
+        max-width: 90% !important;
+    }
+    .depoimento-img {
+        max-width: 80% !important;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE: PORTFOLIO CTA (portfolio.html)
+   Ajusta padding, fontes e largura da seção de chamada para ação em diferentes breakpoints.
+*/
+@media (max-width: 900px) {
+    .portfolio-cta {
+        padding: var(--spacing-medium) var(--spacing-small);
+        max-width: 98vw;
+    }
+    .portfolio-cta h2 {
+        font-size: 1.5rem;
+    }
+    .portfolio-cta p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-cta {
+        padding: var(--spacing-small);
+        margin: var(--spacing-large) var(--spacing-small);
+    }
+    .portfolio-cta h2 {
+        font-size: 1.3rem;
+    }
+    .portfolio-cta p {
+        font-size: 0.95rem;
+    }
+    .portfolio-cta .btn-cta {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
 }
