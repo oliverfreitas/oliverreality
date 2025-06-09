@@ -985,3 +985,17 @@ section {
     color: #555;
     line-height: 1.6;
 }
+
+@media (max-width: 600px) {
+  #hero .hero-content a.btn {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  #hero .hero-content a.btn:last-child {
+    margin-bottom: 0;
+  }
+  #hero .hero-content {
+    padding: 1rem;
+  }
+}
