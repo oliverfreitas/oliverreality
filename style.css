@@ -998,12 +998,38 @@ section {
   #hero .hero-content {
     padding: 1rem;
   }
-  #proposito .flex-image {
-    width: 100%;
-    height: auto;
-    max-width: 350px;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
-  }
 }
+
+
+@media (max-width: 600px) {
+    #hero .hero-content .btn {
+        margin-left: 0 !important;
+        margin-top: 1rem;
+        width: 80%;
+    }
+    #hero .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .flex-image, .historia2-img {
+        max-width: 90% !important;
+        margin: 0 auto;
+    }
+    .edicao-fotos-galeria img {
+        min-width: unset;
+        width: 90%;
+    }
+    .edicao-image {
+        max-width: 90% !important;
+    }
+    .depoimento-img {
+        max-width: 80% !important;
+    }
+}
+
