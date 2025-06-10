@@ -24,7 +24,10 @@
 #hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(44, 62, 80, 0.5);
     border-radius: var(--border-radius);
     z-index: 1;
@@ -58,8 +61,8 @@
 }
 
 .flex-image {
-    flex: 1;
-    min-width: 300px;
+    /* flex: 1; */
+    /* min-width: 300px; */
     max-width: 350px;
     height: auto;
     border-radius: var(--border-radius);
@@ -84,8 +87,8 @@
 }
 
 .historia2-img {
-    flex: 1;
-    min-width: 300px;
+    /* flex: 1; */
+    /* min-width: 300px; */
     max-width: 320px;
     height: auto;
     border-radius: var(--border-radius);
@@ -113,6 +116,7 @@
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
+
 .edicao-section {
     text-align: center;
     margin: var(--spacing-xlarge) 0;
