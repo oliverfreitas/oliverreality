@@ -22,24 +22,6 @@
     box-shadow: var(--box-shadow);
 }
 
-.btn {
-    background: var(--color-primary);
-    color: #fff;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    transition: background 0.3s, color 0.3s;
-}
-
-.btn:hover {
-    background: var(--color-accent);
-    color: var(--color-dark);
-}
-
 .portfolio-cta {
     background: var(--color-light);
     box-shadow: var(--box-shadow);

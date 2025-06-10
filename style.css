@@ -322,3 +322,34 @@ footer p {
         padding: 0.75rem 1rem;
     }
 }
+
+.hover-lift {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adiciona transição para suavizar o efeito */
+    will-change: transform, box-shadow; /* Otimização de performance */
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Opcional: Adiciona uma sombra para realçar */
+}
+
+.btn {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--box-shadow); /* Mantenha a sombra padrão */
+    /* Adicione 'transform' e 'box-shadow' à transição para que o efeito seja suave */
+    transition: background 0.3s, color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--color-accent);
+    color: var(--color-dark);
+    transform: translateY(-5px); /* Efeito de levantar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada ao passar o mouse */
+}

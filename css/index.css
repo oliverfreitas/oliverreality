@@ -42,24 +42,6 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.btn {
-    background: var(--color-primary);
-    color: #fff;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    transition: background 0.3s, color 0.3s;
-}
-
-.btn:hover {
-    background: var(--color-accent);
-    color: var(--color-dark);
-}
-
 .flex-section {
     display: flex;
     align-items: center;
@@ -228,34 +210,4 @@
     border-color: var(--color-accent);
 }
 
-/* =========================
-   RESPONSIVIDADE: HERO (index.html)
-   Ajusta botões e layout da seção principal para mobile.
-*/
-@media (max-width: 600px) {
-    #hero .hero-content a.btn {
-        display: block;
-        width: 100%;
-        margin: 0 0 1rem 0;
-    }
-    #hero .hero-content a.btn:last-child {
-        margin-bottom: 0;
-    }
-    #hero .hero-content {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    #hero .hero-content .btn {
-        margin-left: 0 !important;
-        margin-top: 1rem;
-        width: 80%;
-    }
-    #hero .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
