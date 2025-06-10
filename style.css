@@ -288,41 +288,6 @@ footer p {
     }
 }
 
-/* =========================
-   RESPONSIVIDADE: PORTFOLIO CTA (portfolio.html)
-   Ajusta padding, fontes e largura da seção de chamada para ação em diferentes breakpoints.
-*/
-@media (max-width: 900px) {
-    .portfolio-cta {
-        padding: var(--spacing-medium) var(--spacing-small);
-        max-width: 98vw;
-    }
-    .portfolio-cta h2 {
-        font-size: 1.5rem;
-    }
-    .portfolio-cta p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .portfolio-cta {
-        padding: var(--spacing-small);
-        margin: var(--spacing-large) var(--spacing-small);
-    }
-    .portfolio-cta h2 {
-        font-size: 1.3rem;
-    }
-    .portfolio-cta p {
-        font-size: 0.95rem;
-    }
-    .portfolio-cta .btn-cta {
-        width: 100%;
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
-    }
-}
-
 .hover-lift {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adiciona transição para suavizar o efeito */
     will-change: transform, box-shadow; /* Otimização de performance */
@@ -396,15 +361,18 @@ footer p {
     color: #232a34;
     border: 2px solid var(--color-primary);
     font-weight: bold;
-    transition: background 0.2s, color 0.2s, border 0.2s;
+    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .cta-section .btn-cta:hover,
-.cta-section .btn-cta:focus {
+.cta-section .btn-cta:focus,
+.btn-cta:hover,
+.btn-cta:focus {
     background: var(--color-accent);
     color: #fff;
     border-color: var(--color-accent);
+    transform: translateY(-5px);
 }
 
 /* Responsividade */
