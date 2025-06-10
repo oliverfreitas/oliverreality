@@ -14,8 +14,8 @@
 }
 
 .flex-image {
-    flex: 1;
-    min-width: 300px;
+    /* flex: 1; */
+    /* min-width: 300px; */
     max-width: 350px;
     height: auto;
     border-radius: var(--border-radius);
