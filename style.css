@@ -404,4 +404,12 @@ footer p {
         font-size: 1rem;
         padding: 0.75rem 1rem;
     }
+    .hero-content .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--spacing-small);
+    }
+    .hero-content .btn:last-child {
+        margin-bottom: 0;
+    }
 }
